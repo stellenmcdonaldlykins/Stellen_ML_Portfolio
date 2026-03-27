@@ -1,21 +1,179 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Glitch</title>
-    </head>
-    <body>
-        <h1>Glitch</h1>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="glitch.html">Glitch</a></li>
-            <li><a href="meme.html">Meme Mashup</a></li>
-        </ul>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <title>Glitch Art</title>
 
-        <div>
-            <img src="Cool_guy_at_the_beach copy.png" alt="Final Bat" width="50%">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #000000;
+            color: #f5f5f5;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+        }
+
+        .navbar {
+            background-color: #000000 !important;
+            padding-top: 14px;
+            padding-bottom: 14px;
+            border-bottom: 1px solid #222;
+        }
+
+        .navbar-text {
+            color: #ff2a2a !important;
+            font-family: 'UnifrakturCook', cursive;
+            font-size: 2rem;
+        }
+
+        .nav-link {
+            color: #ff2a2a !important;
+            font-family: 'UnifrakturCook', cursive;
+            font-size: 1.2rem;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        .nav-link:hover {
+            color: #ffffff !important;
+            text-shadow: 0 0 8px #ff2a2a;
+        }
+
+        h1 {
+            font-family: 'UnifrakturCook', cursive;
+            font-size: 3rem;
+            margin-bottom: 25px;
+            color: #ff2a2a;
+        }
+        .date {
+            font-size: 1rem;
+            color: #ff2a2a;        
+            margin-top: -10px;     
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #ff2a2a;
+            max-width: 800px;
+            margin: 30px auto;
+        }
+
+        .glitch-images {
+            margin-bottom: 20px;
+        }
+
+        .glitch-images img {
+            margin: 10px;
+            vertical-align: middle;
+        }
+
+        .final-image {
+            margin: 20px 0;
+        }
+
+        .page-bottom-space {
+            height: 40px;
+        }
+
+        .high-contrast .navbar-text,
+        .high-contrast .nav-link,
+        .high-contrast h1,
+        .high-contrast p {
+            color: #ffffff !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-sm navbar-dark">
+        <div class="container-fluid">
+            <span class="navbar-text">Stellen's Portfolio</span>
+
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="glitch.html">Glitch Art</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="meme.html">Meme Mashup</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="minecraft_art.html">Minecraft Art</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="net_art.html">Net Art</a>
+                </li>
+            </ul>
+
+            <button onclick="toggleContrast()" class="btn btn-sm btn-outline-light ms-3">
+                High Contrast
+            </button>
         </div>
+    </nav>
+
+    <!-- Main Content -->
+  <div class="container-fluid mt-3 text-center">
+    <h1>Glitch Art</h1>
+    <h5 class="date">02/14/2026</h5>
+
+        <!-- Top glitch images -->
+        <div class="glitch-images">
+            <img src="glitch2.png" alt="Glitch 2" width="30%">
+            <img src="glitch1.png" alt="Glitch 1" width="23%">
+            <img src="glitch3.png" alt="Glitch 3" width="29%">
+        </div>
+
+        <!-- Glitch process description -->
         <p>
-           After creating the three glitch images, I combined them into the final photomontage above. Elements from the bottom Image form the main creature, the image to the right adds a distorted overlay, and the image to the left helps build the background. This piece explores how technology can distort and stress the natural world, reshaping it in ways that often go unnoticed. While digital systems may feel intangible, they have real environmental impacts. For example, data centers consume massive amounts of water and energy, placing strain on natural resources.
+            All of these images began as photographs of bats, which I then exported into different programs to glitch. I chose bats because when I processed the files in Audacity, converting the images into audio through a data moshing technique, the resulting sound resembled echolocation recordings. Because of this connection, the two images above were created through audio moshing, where image data is translated into sound. The glitches transform the visuals into noise, echoing the way bats rely on sound to navigate their environment. The image below was created using a data-bending process, in which the file was converted into text and manually altered to produce visual distortions.
         </p>
-    </body>
+
+        <!-- Final photomontage -->
+        <div class="final-image">
+            <img src="Cool_guy_at_the_beach copy.png" alt="Final Bat" width="60%">
+        </div>
+
+        <!-- Final explanation -->
+        <p>
+            After creating the three glitch images, I combined them into the final photomontage above. Elements from the bottom image form the main creature, the image to the right adds a distorted overlay, and the image to the left helps build the background. This piece explores how technology can distort and stress the natural world, reshaping it in ways that often go unnoticed. While digital systems may feel intangible, they have real environmental impacts. For example, data centers consume massive amounts of water and energy, placing strain on natural resources.
+        </p>
+
+        <div class="page-bottom-space"></div>
+    </div>
+
+    <!-- Toggle Script -->
+    <script>
+        function toggleContrast() {
+            document.body.classList.toggle("high-contrast");
+
+            const btn = document.querySelector("button");
+            if (document.body.classList.contains("high-contrast")) {
+                btn.innerText = "Normal Mode";
+            } else {
+                btn.innerText = "High Contrast";
+            }
+        }
+    </script>
+
+</body>
 </html>

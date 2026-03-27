@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <title>Net Art</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #000000;
+            color: #f5f5f5;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+        }
+
+        .navbar {
+            background-color: #000000 !important;
+            padding-top: 14px;
+            padding-bottom: 14px;
+            border-bottom: 1px solid #222;
+        }
+
+        .navbar-text {
+            color: #ff2a2a !important;
+            font-family: 'UnifrakturCook', cursive;
+            font-size: 2rem;
+        }
+
+        .nav-link {
+            color: #ff2a2a !important;
+            font-family: 'UnifrakturCook', cursive;
+            font-size: 1.2rem;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        .nav-link:hover {
+            color: #ffffff !important;
+            text-shadow: 0 0 8px #ff2a2a;
+        }
+        .date {
+            font-size: 1rem;
+            color: #ff2a2a;        
+            margin-top: -10px;     
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-family: 'UnifrakturCook', cursive;
+            font-size: 3rem;
+            margin-bottom: 25px;
+            color: #ff2a2a;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #ff2a2a;
+            max-width: 800px;
+            margin: 30px auto;
+        }
+
+        .net-art-image {
+            margin: 20px 0;
+        }
+
+        .net-art-image img {
+            margin: 10px;
+            transition: transform 0.2s ease;
+        }
+
+        .net-art-image img:hover {
+            transform: scale(1.02);
+        }
+
+        .page-bottom-space {
+            height: 40px;
+        }
+
+        .high-contrast .navbar-text,
+        .high-contrast .nav-link,
+        .high-contrast h1,
+        .high-contrast p {
+            color: #ffffff !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-sm navbar-dark">
+        <div class="container-fluid">
+            <span class="navbar-text">Stellen's Portfolio</span>
+
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="glitch.html">Glitch Art</a></li>
+                <li class="nav-item"><a class="nav-link" href="meme.html">Meme Mashup</a></li>
+                <li class="nav-item"><a class="nav-link" href="minecraft_art.html">Minecraft Art</a></li>
+                <li class="nav-item"><a class="nav-link" href="net_art.html">Net Art</a></li>
+            </ul>
+
+            <button onclick="toggleContrast()" class="btn btn-sm btn-outline-light ms-3">
+                High Contrast
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+   <div class="container-fluid mt-3 text-center">
+    <h1>Net Art</h1>
+    <h5 class="date">03/14/2026</h5>
+
+        <!-- Clickable Image -->
+        <div class="net-art-image">
+            <a href="https://stellenmcdonaldlykins.github.io/scarab-adventure/">
+                <img src="Scarabadventure.png" alt="Scarab Adventure" width="60%">
+            </a>
+        </div>
+
+        <!-- Description -->
+        <p>
+            This project is an interactive net art game inspired by my fascination with scarab beetles. Players guide the development of a beetle larva through a series of environmental choices, ultimately revealing the adult species it becomes. The project invites viewers to reconsider insects and recognize the beauty in creatures that are often overlooked or misunderstood.
+        </p>
+
+        <div class="page-bottom-space"></div>
+    </div>
+
+    <!-- Toggle Script -->
+    <script>
+        function toggleContrast() {
+            document.body.classList.toggle("high-contrast");
+
+            const btn = document.querySelector("button");
+            if (document.body.classList.contains("high-contrast")) {
+                btn.innerText = "Normal Mode";
+            } else {
+                btn.innerText = "High Contrast";
+            }
+        }
+    </script>
+
+</body>
+</html>

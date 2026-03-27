@@ -1,23 +1,199 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Meme Mashup</title>
-    </head>
-    <body>
-        <h1>Meme</h1>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="glitch.html">Glitch</a></li>
-            <li><a href="meme.html">Meme Mashup</a></li>
-        </ul>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <title>Meme Mashup</title>
 
-        <div>
-            <img src="Wolp copy.png" alt="Wolp" width="60%">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #000000;
+            color: #f5f5f5;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+        }
+
+        .navbar {
+            background-color: #000000 !important;
+            padding-top: 14px;
+            padding-bottom: 14px;
+            border-bottom: 1px solid #222;
+        }
+
+        .navbar-text {
+            color: #ff2a2a !important;
+            font-family: 'UnifrakturCook', cursive;
+            font-size: 2rem;
+        }
+
+        .nav-link {
+            color: #ff2a2a !important;
+            font-family: 'UnifrakturCook', cursive;
+            font-size: 1.2rem;
+            margin-left: 10px;
+            margin-right: 10px;
+            text-decoration: none !important;
+        }
+
+        .nav-link:hover {
+            color: #ffffff !important;
+            text-shadow: 0 0 8px #ff2a2a;
+        }
+
+        h1 {
+            font-family: 'UnifrakturCook', cursive;
+            font-size: 3rem;
+            margin-bottom: 25px;
+            color: #ff2a2a;
+        } 
+
+        .date {
+            font-size: 1rem;
+            color: #ff2a2a;        
+            margin-top: -10px;     
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #ff2a2a;
+            max-width: 800px;
+            margin: 30px auto;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: underline;
+        }
+
+        a:hover {
+            color: inherit;
+            text-decoration: underline;
+        }
+
+        .main-image {
+            margin-bottom: 20px;
+        }
+
+        .original-images {
+            margin-bottom: 60px; 
+        }
+
+        .original-images img {
+            margin: 10px;
+            vertical-align: middle;
+        }
+
+        .high-contrast .navbar-text,
+        .high-contrast .nav-link,
+        .high-contrast h1,
+        .high-contrast p {
+            color: #ffffff !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-sm navbar-dark">
+        <div class="container-fluid">
+            <span class="navbar-text">Stellen's Portfolio</span>
+
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="glitch.html">Glitch Art</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="meme.html">Meme Mashup</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="minecraft_art.html">Minecraft Art</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="net_art.html">Net Art</a>
+                </li>
+            </ul>
+
+            <button onclick="toggleContrast()" class="btn btn-sm btn-outline-light ms-3">
+                High Contrast
+            </button>
         </div>
-        <p>
-          My meme mashup uses three existing meme images. The base is the “Bro Visited His Friend.” comic, which works as the main template and background. I replaced the characters’ heads with two reaction images: the bad taxidermy wolf (which later became part of the “Staring Bear and Wolf.” meme) and a smiling wolfdog image from the Instagram account singingmoonwolfdogs. Neither image seems to have an official Know Your Meme page, but both are widely used online as reaction images.
+    </nav>
 
-I love dogs and wolves, so I wanted to lean into that and tap into my furry roots as an artist. I purposely didn’t add any text because I wanted this to feel like a template of a template, something open that people could project their own situations onto. It is meant to be flexible rather than tied to one specific joke. Conceptually, I see this meme as representing moments when I am being fully myself, and it comes off as awkward or cringe to other people. The taxidermy wolf felt perfect for that uneasy, slightly unhinged energy since that is how it is often used online. The smiling wolfdog adds a different kind of awkwardness. The grin feels overly enthusiastic and a little goofy, which makes the interaction even more uncomfortable. Together, they exaggerate that feeling of social mismatch.
+    <!-- Main Content -->
+    <div class="container-fluid mt-3 text-center">
+    <h1>Meme Mashup</h1>
+    <h5 class="date">02/21/2026</h5>
+
+        <div class="main-image">
+            <img src="Wolp copy.png" alt="Wolp" width="75%">
+        </div>
+
+        <p>
+            My meme mashup uses three existing meme images. The base is the
+            <a href="https://knowyourmeme.com/memes/bro-visited-his-friend-friendpilled-visitmaxxer" target="_blank">
+                “Bro Visited His Friend.”
+            </a>
+            comic, which works as the main template and background. I replaced the characters’ heads with two reaction images: the bad taxidermy wolf, which later became part of the
+            <a href="https://knowyourmeme.com/memes/staring-bear-and-wolf" target="_blank">
+                “Staring Bear and Wolf.”
+            </a>
+            meme, and a smiling wolfdog image from the Instagram account
+            <a href="https://www.instagram.com/p/DAyUo3ZxtKD/" target="_blank">
+                singingmoonwolfdogs
+            </a>.
+            Neither image seems to have an official Know Your Meme page, but both are widely used online as reaction images.
         </p>
-    </body>
+
+        <p>
+            I love dogs and wolves, so I wanted to lean into that and tap into my furry roots as an artist.
+            I purposely did not add any text because I wanted this to feel like a template of a template,
+            something open that people could project their own situations onto. It is meant to be flexible
+            rather than tied to one specific joke. Conceptually, I see this meme as representing moments when
+            I am being fully myself, and it comes off as awkward or cringe to other people. The taxidermy wolf
+            felt perfect for that uneasy, slightly unhinged energy, since that is how it is often used online.
+            The smiling wolfdog adds a different kind of awkwardness. The grin feels overly enthusiastic and
+            a little goofy, which makes the interaction even more uncomfortable. Together, they exaggerate that
+            feeling of social mismatch.
+        </p>
+
+        <p>Original Images:</p>
+
+        <div class="original-images">
+            <img src="Silly Wolp.png" alt="Silly Wolp" width="18%">
+            <img src="Bro Visited.png" alt="Bro Visited" width="30%">
+            <img src="Evil Wolp.png" alt="Evil Wolp" width="18%">
+        </div>
+    </div>
+
+    <!-- Toggle Script -->
+    <script>
+        function toggleContrast() {
+            document.body.classList.toggle("high-contrast");
+
+            const btn = document.querySelector("button");
+            if (document.body.classList.contains("high-contrast")) {
+                btn.innerText = "Normal Mode";
+            } else {
+                btn.innerText = "High Contrast";
+            }
+        }
+    </script>
+
+</body>
 </html>
