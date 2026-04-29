@@ -4,15 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/png" href="favicon.png">
-    <title>SML Portfolio - Net Art</title>
+    <title>SML Portfolio - Contact</title>
 
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
     <style>
@@ -45,8 +41,6 @@
             color: #ff2a2a !important;
             font-family: 'UnifrakturCook', cursive;
             font-size: 1.2rem;
-            margin-left: 10px;
-            margin-right: 10px;
         }
 
         .nav-link:hover {
@@ -54,7 +48,6 @@
             text-shadow: 0 0 8px #ff2a2a;
         }
 
-        /* Dropdown styling */
         .dropdown-menu {
             background-color: #000000;
             border: 1px solid #222;
@@ -63,60 +56,48 @@
         .dropdown-item {
             color: #ff2a2a;
             font-family: 'UnifrakturCook', cursive;
-            font-size: 1.1rem;
         }
 
         .dropdown-item:hover {
             background-color: #111;
             color: #ffffff;
-            text-shadow: 0 0 8px #ff2a2a;
-        }
-
-        .date {
-            font-size: 1rem;
-            color: #ff2a2a;        
-            margin-top: -10px;     
-            margin-bottom: 20px;
         }
 
         h1 {
             font-family: 'UnifrakturCook', cursive;
-            font-size: 3rem;
-            margin-bottom: 25px;
             color: #ff2a2a;
+            margin-bottom: 30px;
         }
 
-        p {
+        .contact-box {
+            max-width: 600px;
+            margin: 50px auto;
+            text-align: center;
+        }
+
+        .contact-box p,
+        .contact-box a {
+            color: #ff2a2a;
             font-size: 1.1rem;
             line-height: 1.8;
-            color: #ff2a2a;
-            max-width: 800px;
-            margin: 30px auto;
         }
 
-        .net-art-image {
-            margin: 20px 0;
+        .contact-box a {
+            text-decoration: underline;
         }
 
-        .net-art-image img {
-            margin: 10px;
-            transition: transform 0.2s ease;
-        }
-
-        .net-art-image img:hover {
-            transform: scale(1.02);
-        }
-
-        .page-bottom-space {
-            height: 40px;
+        .contact-box a:hover {
+            color: #ffffff;
+            text-shadow: 0 0 8px #ff2a2a;
         }
 
         .high-contrast .navbar-text,
         .high-contrast .nav-link,
         .high-contrast h1,
         .high-contrast p,
-        .high-contrast .date,
-        .high-contrast .dropdown-item {
+        .high-contrast label,
+        .high-contrast .dropdown-item,
+        .high-contrast .contact-box a {
             color: #ffffff !important;
         }
     </style>
@@ -145,7 +126,7 @@
                 </li>
 
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
                         Projects
                     </a>
 
@@ -172,22 +153,11 @@
     </div>
 </nav>
 
-<!-- Main Content -->
-<div class="container-fluid mt-3 text-center">
-    <h1>Net Art</h1>
-    <h5 class="date">03/14/2026</h5>
+<!-- Contact Content -->
+<div class="contact-box">
+    <h1>Contact Me</h1>
 
-    <div class="net-art-image">
-        <a href="https://stellenmcdonaldlykins.github.io/scarab-adventure/">
-            <img src="Scarabadventure.png" alt="Scarab Adventure" width="60%">
-        </a>
-    </div>
-
-    <p>
-        This project is an interactive net art game inspired by my fascination with scarab beetles. Players guide the development of a beetle larva through a series of environmental choices, ultimately revealing the adult species it becomes. The project invites viewers to reconsider insects and recognize the beauty in creatures that are often overlooked or misunderstood.
-    </p>
-
-    <div class="page-bottom-space"></div>
+    <p>Email: <a href="mailto:stellenml@gmail.com">stellenml@gmail.com</a></p>
 </div>
 
 <script>

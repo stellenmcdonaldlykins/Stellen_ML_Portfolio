@@ -36,6 +36,11 @@
             font-size: 2rem;
         }
 
+        .navbar-text:hover {
+            color: #ffffff !important;
+            text-shadow: 0 0 8px #ff2a2a;
+        }
+
         .nav-link {
             color: #ff2a2a !important;
             font-family: 'UnifrakturCook', cursive;
@@ -49,12 +54,30 @@
             text-shadow: 0 0 8px #ff2a2a;
         }
 
+        .dropdown-menu {
+            background-color: #000000;
+            border: 1px solid #222;
+        }
+
+        .dropdown-item {
+            color: #ff2a2a;
+            font-family: 'UnifrakturCook', cursive;
+            font-size: 1.1rem;
+        }
+
+        .dropdown-item:hover {
+            background-color: #111;
+            color: #ffffff;
+            text-shadow: 0 0 8px #ff2a2a;
+        }
+
         h1 {
             font-family: 'UnifrakturCook', cursive;
             font-size: 3rem;
             margin-bottom: 25px;
             color: #ff2a2a;
-         }
+        }
+
         .date {
             font-size: 1rem;
             color: #ff2a2a;        
@@ -83,73 +106,98 @@
             height: 40px;
         }
 
-       .high-contrast .navbar-text,
-       .high-contrast .nav-link,
-       .high-contrast h1,
-       .high-contrast p,
-       .high-contrast .date {
-           color: #ffffff !important;
+        .high-contrast .navbar-text,
+        .high-contrast .nav-link,
+        .high-contrast h1,
+        .high-contrast p,
+        .high-contrast .date,
+        .high-contrast .dropdown-item {
+            color: #ffffff !important;
         }
     </style>
 </head>
 
 <body>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-sm navbar-dark">
-        <div class="container-fluid">
-            <span class="navbar-text">Stellen's Portfolio</span>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-text text-decoration-none" href="index.html">Stellen's Portfolio</a>
 
-                    <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="glitch.html">Glitch Art</a></li>
-                <li class="nav-item"><a class="nav-link" href="meme.html">Meme Mashup</a></li>
-                <li class="nav-item"><a class="nav-link" href="minecraft_art.html">Minecraft Art</a></li>
-                <li class="nav-item"><a class="nav-link" href="net_art.html">Net Art</a></li>
-		<li class="nav-item"><a class="nav-link" href="p5js_portrait.html">P5.js Self Portrait</a></li>
-<li class="nav-item"><a class="nav-link" href="p5js_diy_photoshop.html">P5.js DIY Photoshop</a></li>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNavbar">
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="contact_info.html">Contact</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                        Projects
+                    </a>
+
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                        <li><a class="dropdown-item" href="glitch.html">Glitch Art</a></li>
+                        <li><a class="dropdown-item" href="meme.html">Meme Mashup</a></li>
+                        <li><a class="dropdown-item" href="minecraft_art.html">Minecraft Art</a></li>
+                        <li><a class="dropdown-item" href="net_art.html">Net Art</a></li>
+                        <li><a class="dropdown-item" href="p5js_portrait.html">P5.js Self Portrait</a></li>
+                        <li><a class="dropdown-item" href="p5js_diy_photoshop.html">P5.js DIY Photoshop</a></li>
+                        <li><a class="dropdown-item" href="game.html">Game</a></li>
+                        <li><a class="dropdown-item" href="final_project.html">Final Project</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <button onclick="toggleContrast()" class="btn btn-sm btn-outline-light ms-lg-3 mt-2 mt-lg-0">
+                        High Contrast
+                    </button>
+                </li>
+
             </ul>
-
-            <button onclick="toggleContrast()" class="btn btn-sm btn-outline-light ms-3">
-                High Contrast
-            </button>
         </div>
-    </nav>
+    </div>
+</nav>
 
-    <!-- Main Content -->
-   <div class="container-fluid mt-3 text-center">
+<!-- Main Content -->
+<div class="container-fluid mt-3 text-center">
     <h1>Minecraft Art</h1>
     <h5 class="date">02/28/2026</h5>
 
-        <div class="art-images">
-            <img src="Xeno side.png" alt="Xeno side" width="38%">
-            <img src="Xeno front.png" alt="Xeno front" width="38%">
-        </div>
-
-        <p>
-            This Minecraft sculpture was created in response to a prompt about cultural significance. I chose the Xenomorph from Alien, which is one of my top five favorite movies. Alien is culturally significant because it redefined sci-fi horror, combining futuristic space settings with intense body horror in a way that felt new and deeply unsettling. The creature design remains one of the most iconic in film history, largely due to the imaginative work of H.R. Giger. The film is also often interpreted as a commentary on gender and sexual politics, especially through its themes of bodily invasion and the way Ripley emerges as a powerful and unexpected survivor.
-        </p>
-
-        <p>
-            When building my design in Minecraft, I chose to make the Xenomorph a bit cuter by exaggerating its proportions and giving it an almost dog-like appearance. This was inspired by a Xenomorph plush I own. I’m interested in the contrast between something that represents fear and something that feels soft and approachable, and I wanted to explore that tension through this piece.
-        </p>
-
-        <div class="page-bottom-space"></div>
+    <div class="art-images">
+        <img src="Xeno side.png" alt="Xeno side" width="38%">
+        <img src="Xeno front.png" alt="Xeno front" width="38%">
     </div>
 
-    <!-- Toggle Script -->
-    <script>
-        function toggleContrast() {
-            document.body.classList.toggle("high-contrast");
+    <p>
+        This Minecraft sculpture was created in response to a prompt about cultural significance. I chose the Xenomorph from Alien, which is one of my top five favorite movies. Alien is culturally significant because it redefined sci-fi horror, combining futuristic space settings with intense body horror in a way that felt new and deeply unsettling. The creature design remains one of the most iconic in film history, largely due to the imaginative work of H.R. Giger. The film is also often interpreted as a commentary on gender and sexual politics, especially through its themes of bodily invasion and the way Ripley emerges as a powerful and unexpected survivor.
+    </p>
 
-            const btn = document.querySelector("button");
-            if (document.body.classList.contains("high-contrast")) {
-                btn.innerText = "Normal Mode";
-            } else {
-                btn.innerText = "High Contrast";
-            }
-        }
-    </script>
+    <p>
+        When building my design in Minecraft, I chose to make the Xenomorph a bit cuter by exaggerating its proportions and giving it an almost dog-like appearance. This was inspired by a Xenomorph plush I own. I’m interested in the contrast between something that represents fear and something that feels soft and approachable, and I wanted to explore that tension through this piece.
+    </p>
+
+    <div class="page-bottom-space"></div>
+</div>
+
+<script>
+function toggleContrast() {
+    document.body.classList.toggle("high-contrast");
+
+    const btn = document.querySelector(".btn-outline-light");
+    btn.innerText = document.body.classList.contains("high-contrast")
+        ? "Normal Mode"
+        : "High Contrast";
+}
+</script>
 
 </body>
 </html>

@@ -6,13 +6,8 @@
     <link rel="icon" type="image/png" href="favicon.png">
     <title>SML Portfolio - P5.js Self Portrait</title>
 
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
     <style>
@@ -36,6 +31,11 @@
             font-size: 2rem;
         }
 
+        .navbar-text:hover {
+            color: #ffffff !important;
+            text-shadow: 0 0 8px #ff2a2a;
+        }
+
         .nav-link {
             color: #ff2a2a !important;
             font-family: 'UnifrakturCook', cursive;
@@ -48,10 +48,28 @@
             color: #ffffff !important;
             text-shadow: 0 0 8px #ff2a2a;
         }
+
+        .dropdown-menu {
+            background-color: #000000;
+            border: 1px solid #222;
+        }
+
+        .dropdown-item {
+            color: #ff2a2a;
+            font-family: 'UnifrakturCook', cursive;
+            font-size: 1.1rem;
+        }
+
+        .dropdown-item:hover {
+            background-color: #111;
+            color: #ffffff;
+            text-shadow: 0 0 8px #ff2a2a;
+        }
+
         .date {
             font-size: 1rem;
-            color: #ff2a2a;        
-            margin-top: -10px;     
+            color: #ff2a2a;
+            margin-top: -10px;
             margin-bottom: 20px;
         }
 
@@ -70,90 +88,106 @@
             margin: 30px auto;
         }
 
-        .net-art-image {
-            margin: 20px 0;
-        }
-
-        .net-art-image img {
-            margin: 10px;
-            transition: transform 0.2s ease;
-        }
-
-        .net-art-image img:hover {
-            transform: scale(1.02);
+        iframe {
+            display: block;
+            margin: 10px auto 15px auto;
+            border: none;
+            overflow: hidden;
         }
 
         .page-bottom-space {
             height: 40px;
         }
 
-       .high-contrast .navbar-text,
-.high-contrast .nav-link,
-.high-contrast h1,
-.high-contrast p,
-.high-contrast .date,
-.high-contrast .btn,
-.high-contrast pre,
-.high-contrast code {
-    color: #ffffff !important;
-}
+        .high-contrast .navbar-text,
+        .high-contrast .nav-link,
+        .high-contrast h1,
+        .high-contrast p,
+        .high-contrast .date,
+        .high-contrast .btn,
+        .high-contrast pre,
+        .high-contrast code,
+        .high-contrast .dropdown-item {
+            color: #ffffff !important;
+        }
 
-.high-contrast .btn {
-    border-color: #ffffff !important;
-}
+        .high-contrast .btn {
+            border-color: #ffffff !important;
+        }
 
-.high-contrast .btn:hover {
-    background-color: #ffffff !important;
-    color: #000000 !important;
-}
+        .high-contrast .btn:hover {
+            background-color: #ffffff !important;
+            color: #000000 !important;
+        }
 
-.high-contrast #codeDropdown > div {
-    background-color: #000000 !important;
-    border: 1px solid #ffffff;
-}
+        .high-contrast #codeDropdown > div {
+            background-color: #000000 !important;
+            border: 1px solid #ffffff;
+        }
     </style>
 </head>
 
 <body>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-sm navbar-dark">
-        <div class="container-fluid">
-            <span class="navbar-text">Stellen's Portfolio</span>
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-text text-decoration-none" href="index.html">Stellen's Portfolio</a>
 
-            <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="glitch.html">Glitch Art</a></li>
-                <li class="nav-item"><a class="nav-link" href="meme.html">Meme Mashup</a></li>
-                <li class="nav-item"><a class="nav-link" href="minecraft_art.html">Minecraft Art</a></li>
-                <li class="nav-item"><a class="nav-link" href="net_art.html">Net Art</a></li>
-		<li class="nav-item"><a class="nav-link" href="p5js_portrait.html">P5.js Self Portrait</a></li>
-<li class="nav-item"><a class="nav-link" href="p5js_diy_photoshop.html">P5.js DIY Photoshop</a></li>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNavbar">
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="contact_info.html">Contact</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                        Projects
+                    </a>
+
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                        <li><a class="dropdown-item" href="glitch.html">Glitch Art</a></li>
+                        <li><a class="dropdown-item" href="meme.html">Meme Mashup</a></li>
+                        <li><a class="dropdown-item" href="minecraft_art.html">Minecraft Art</a></li>
+                        <li><a class="dropdown-item" href="net_art.html">Net Art</a></li>
+                        <li><a class="dropdown-item" href="p5js_portrait.html">P5.js Self Portrait</a></li>
+                        <li><a class="dropdown-item" href="p5js_diy_photoshop.html">P5.js DIY Photoshop</a></li>
+                        <li><a class="dropdown-item" href="game.html">Game</a></li>
+                        <li><a class="dropdown-item" href="final_project.html">Final Project</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <button onclick="toggleContrast()" class="btn btn-sm btn-outline-light ms-lg-3 mt-2 mt-lg-0">
+                        High Contrast
+                    </button>
+                </li>
             </ul>
-
-            <button onclick="toggleContrast()" class="btn btn-sm btn-outline-light ms-3">
-                High Contrast
-            </button>
         </div>
-    </nav>
+    </div>
+</nav>
 
-<!-- Main Content -->
 <div class="container-fluid mt-3 text-center">
     <h1>P5.js Self Portrait</h1>
     <h5 class="date">04/11/2026</h5>
 
-    <iframe src="p5_js_self_portrait_copy/index.html" height="600" width="600" title="p5js self portrait"></iframe>
+    <iframe src="p5_js_self_portrait_copy/index.html" height="600" width="600" title="p5js self portrait" scrolling="no"></iframe>
 
     <p>
         For this assignment, we were tasked with using p5.js, a programming library for creating visual art through code, to construct a self-portrait using geometric shapes. I chose to render my portrait in red and black, as these are my favorite colors and align with the color scheme of this portfolio website.
     </p>
 
-    <!-- Code Dropdown Button -->
     <button class="btn btn-outline-danger mt-3" type="button" data-bs-toggle="collapse" data-bs-target="#codeDropdown">
         Show Code
     </button>
 
-    <!-- Collapsible Code Box -->
     <div class="collapse mt-3" id="codeDropdown">
         <div style="max-width: 800px; margin: 0 auto; text-align: left; background-color: #111; padding: 15px; border-radius: 8px; overflow-x: auto;">
             <pre style="color: #ff2a2a; margin: 0;"><code>
@@ -639,20 +673,16 @@ function draw() {
     <div class="page-bottom-space"></div>
 </div>
 
+<script>
+function toggleContrast() {
+    document.body.classList.toggle("high-contrast");
 
-    <!-- Toggle Script -->
-    <script>
-        function toggleContrast() {
-            document.body.classList.toggle("high-contrast");
-
-            const btn = document.querySelector("button");
-            if (document.body.classList.contains("high-contrast")) {
-                btn.innerText = "Normal Mode";
-            } else {
-                btn.innerText = "High Contrast";
-            }
-        }
-    </script>
+    const btn = document.querySelector(".btn-outline-light");
+    btn.innerText = document.body.classList.contains("high-contrast")
+        ? "Normal Mode"
+        : "High Contrast";
+}
+</script>
 
 </body>
 </html>

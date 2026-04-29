@@ -36,6 +36,11 @@
             font-size: 2rem;
         }
 
+        .navbar-text:hover {
+            color: #ffffff !important;
+            text-shadow: 0 0 8px #ff2a2a;
+        }
+
         .nav-link {
             color: #ff2a2a !important;
             font-family: 'UnifrakturCook', cursive;
@@ -47,6 +52,24 @@
 
         .nav-link:hover {
             color: #ffffff !important;
+            text-shadow: 0 0 8px #ff2a2a;
+        }
+
+        /* Dropdown styling */
+        .dropdown-menu {
+            background-color: #000000;
+            border: 1px solid #222;
+        }
+
+        .dropdown-item {
+            color: #ff2a2a;
+            font-family: 'UnifrakturCook', cursive;
+            font-size: 1.1rem;
+        }
+
+        .dropdown-item:hover {
+            background-color: #111;
+            color: #ffffff;
             text-shadow: 0 0 8px #ff2a2a;
         }
 
@@ -95,98 +118,107 @@
             vertical-align: middle;
         }
 
-       .high-contrast .navbar-text,
-       .high-contrast .nav-link,
-       .high-contrast h1,
-       .high-contrast p,
-       .high-contrast .date {
-           color: #ffffff !important;
+        .high-contrast .navbar-text,
+        .high-contrast .nav-link,
+        .high-contrast h1,
+        .high-contrast p,
+        .high-contrast .date,
+        .high-contrast .dropdown-item {
+            color: #ffffff !important;
         }
     </style>
 </head>
 
 <body>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-sm navbar-dark">
-        <div class="container-fluid">
-            <span class="navbar-text">Stellen's Portfolio</span>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-text text-decoration-none" href="index.html">Stellen's Portfolio</a>
 
-                     <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="glitch.html">Glitch Art</a></li>
-                <li class="nav-item"><a class="nav-link" href="meme.html">Meme Mashup</a></li>
-                <li class="nav-item"><a class="nav-link" href="minecraft_art.html">Minecraft Art</a></li>
-                <li class="nav-item"><a class="nav-link" href="net_art.html">Net Art</a></li>
-		<li class="nav-item"><a class="nav-link" href="p5js_portrait.html">P5.js Self Portrait</a></li>
-<li class="nav-item"><a class="nav-link" href="p5js_diy_photoshop.html">P5.js DIY Photoshop</a></li>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNavbar">
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="contact_info.html">Contact</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                        Projects
+                    </a>
+
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                        <li><a class="dropdown-item" href="glitch.html">Glitch Art</a></li>
+                        <li><a class="dropdown-item" href="meme.html">Meme Mashup</a></li>
+                        <li><a class="dropdown-item" href="minecraft_art.html">Minecraft Art</a></li>
+                        <li><a class="dropdown-item" href="net_art.html">Net Art</a></li>
+                        <li><a class="dropdown-item" href="p5js_portrait.html">P5.js Self Portrait</a></li>
+                        <li><a class="dropdown-item" href="p5js_diy_photoshop.html">P5.js DIY Photoshop</a></li>
+                        <li><a class="dropdown-item" href="game.html">Game</a></li>
+                        <li><a class="dropdown-item" href="final_project.html">Final Project</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <button onclick="toggleContrast()" class="btn btn-sm btn-outline-light ms-lg-3 mt-2 mt-lg-0">
+                        High Contrast
+                    </button>
+                </li>
+
             </ul>
-
-            <button onclick="toggleContrast()" class="btn btn-sm btn-outline-light ms-3">
-                High Contrast
-            </button>
         </div>
-    </nav>
+    </div>
+</nav>
 
-    <!-- Main Content -->
-    <div class="container-fluid mt-3 text-center">
+<!-- Main Content -->
+<div class="container-fluid mt-3 text-center">
     <h1>Meme Mashup</h1>
     <h5 class="date">02/21/2026</h5>
 
-        <div class="main-image">
-            <img src="Wolp copy.png" alt="Wolp" width="75%">
-        </div>
-
-        <p>
-            My meme mashup uses three existing meme images. The base is the
-            <a href="https://knowyourmeme.com/memes/bro-visited-his-friend-friendpilled-visitmaxxer" target="_blank">
-                “Bro Visited His Friend.”
-            </a>
-            comic, which works as the main template and background. I replaced the characters’ heads with two reaction images: the bad taxidermy wolf, which later became part of the
-            <a href="https://knowyourmeme.com/memes/staring-bear-and-wolf" target="_blank">
-                “Staring Bear and Wolf.”
-            </a>
-            meme, and a smiling wolfdog image from the Instagram account
-            <a href="https://www.instagram.com/p/DAyUo3ZxtKD/" target="_blank">
-                singingmoonwolfdogs
-            </a>.
-            Neither image seems to have an official Know Your Meme page, but both are widely used online as reaction images.
-        </p>
-
-        <p>
-            I love dogs and wolves, so I wanted to lean into that and tap into my furry roots as an artist.
-            I purposely did not add any text because I wanted this to feel like a template of a template,
-            something open that people could project their own situations onto. It is meant to be flexible
-            rather than tied to one specific joke. Conceptually, I see this meme as representing moments when
-            I am being fully myself, and it comes off as awkward or cringe to other people. The taxidermy wolf
-            felt perfect for that uneasy, slightly unhinged energy, since that is how it is often used online.
-            The smiling wolfdog adds a different kind of awkwardness. The grin feels overly enthusiastic and
-            a little goofy, which makes the interaction even more uncomfortable. Together, they exaggerate that
-            feeling of social mismatch.
-        </p>
-
-        <p>Original Images:</p>
-
-        <div class="original-images">
-            <img src="Silly Wolp.png" alt="Silly Wolp" width="18%">
-            <img src="Bro Visited.png" alt="Bro Visited" width="30%">
-            <img src="Evil Wolp.png" alt="Evil Wolp" width="18%">
-        </div>
+    <div class="main-image">
+        <img src="Wolp copy.png" alt="Wolp" width="75%">
     </div>
 
-    <!-- Toggle Script -->
-    <script>
-        function toggleContrast() {
-            document.body.classList.toggle("high-contrast");
+    <p>
+        My meme mashup uses three existing meme images. The base is the
+        <a href="https://knowyourmeme.com/memes/bro-visited-his-friend-friendpilled-visitmaxxer" target="_blank">
+            “Bro Visited His Friend.”
+        </a>
+        comic, which works as the main template and background...
+    </p>
 
-            const btn = document.querySelector("button");
-            if (document.body.classList.contains("high-contrast")) {
-                btn.innerText = "Normal Mode";
-            } else {
-                btn.innerText = "High Contrast";
-            }
-        }
-    </script>
+    <p>
+        I love dogs and wolves, so I wanted to lean into that and tap into my furry roots as an artist...
+    </p>
+
+    <p>Original Images:</p>
+
+    <div class="original-images">
+        <img src="Silly Wolp.png" width="18%">
+        <img src="Bro Visited.png" width="30%">
+        <img src="Evil Wolp.png" width="18%">
+    </div>
+</div>
+
+<script>
+function toggleContrast() {
+    document.body.classList.toggle("high-contrast");
+
+    const btn = document.querySelector(".btn-outline-light");
+    btn.innerText = document.body.classList.contains("high-contrast")
+        ? "Normal Mode"
+        : "High Contrast";
+}
+</script>
 
 </body>
 </html>

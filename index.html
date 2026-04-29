@@ -34,7 +34,11 @@
             color: #ff2a2a !important;
             font-family: 'UnifrakturCook', cursive;
             font-size: 2rem;
-            text-decoration: none;
+        }
+
+        .navbar-text:hover {
+            color: #ffffff !important;
+            text-shadow: 0 0 8px #ff2a2a;
         }
 
         .nav-link {
@@ -47,6 +51,24 @@
 
         .nav-link:hover {
             color: #ffffff !important;
+            text-shadow: 0 0 8px #ff2a2a;
+        }
+
+        /* DROPDOWN FIX */
+        .dropdown-menu {
+            background-color: #000000;
+            border: 1px solid #222;
+        }
+
+        .dropdown-item {
+            color: #ff2a2a;
+            font-family: 'UnifrakturCook', cursive;
+            font-size: 1.1rem;
+        }
+
+        .dropdown-item:hover {
+            background-color: #111;
+            color: #ffffff;
             text-shadow: 0 0 8px #ff2a2a;
         }
 
@@ -73,7 +95,8 @@
         .high-contrast .navbar-text,
         .high-contrast .nav-link,
         .high-contrast h1,
-        .high-contrast p {
+        .high-contrast p,
+        .high-contrast .dropdown-item {
             color: #ffffff !important;
         }
     </style>
@@ -81,59 +104,83 @@
 
 <body>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-sm navbar-dark">
-        <div class="container-fluid">
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-text text-decoration-none" href="index.html">Stellen's Portfolio</a>
 
-            <a class="navbar-text" href="index.html">Stellen's Portfolio</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-             <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="glitch.html">Glitch Art</a></li>
-                <li class="nav-item"><a class="nav-link" href="meme.html">Meme Mashup</a></li>
-                <li class="nav-item"><a class="nav-link" href="minecraft_art.html">Minecraft Art</a></li>
-                <li class="nav-item"><a class="nav-link" href="net_art.html">Net Art</a></li>
-		<li class="nav-item"><a class="nav-link" href="p5js_portrait.html">P5.js Self Portrait</a></li>
-<li class="nav-item"><a class="nav-link" href="p5js_diy_photoshop.html">P5.js DIY Photoshop</a></li>
+        <div class="collapse navbar-collapse" id="mainNavbar">
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="contact_info.html">Contact</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                        Projects
+                    </a>
+
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                        <li><a class="dropdown-item" href="glitch.html">Glitch Art</a></li>
+                        <li><a class="dropdown-item" href="meme.html">Meme Mashup</a></li>
+                        <li><a class="dropdown-item" href="minecraft_art.html">Minecraft Art</a></li>
+                        <li><a class="dropdown-item" href="net_art.html">Net Art</a></li>
+                        <li><a class="dropdown-item" href="p5js_portrait.html">P5.js Self Portrait</a></li>
+                        <li><a class="dropdown-item" href="p5js_diy_photoshop.html">P5.js DIY Photoshop</a></li>
+                        <li><a class="dropdown-item" href="game.html">Game</a></li>
+                        <li><a class="dropdown-item" href="final_project.html">Final Project</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <button onclick="toggleContrast()" class="btn btn-sm btn-outline-light ms-lg-3 mt-2 mt-lg-0">
+                        High Contrast
+                    </button>
+                </li>
+
             </ul>
-
-            <!-- Toggle Button -->
-            <button onclick="toggleContrast()" class="btn btn-sm btn-outline-light ms-3">
-                High Contrast
-            </button>
-
         </div>
-    </nav>
-
-    <!-- Main Content -->
-    <div class="main-content">
-        <h1>Intro to Digital Media Art (Art-74)</h1>
-
-        <p>
-            Hello! My name is Stellen McDonald-Lykins. 
-  </p>
-   <p>
-This site is my Art 74 portfolio at San José State University.
-            In this class, we focus on the basics of digital media production, including using visualization software
-            and building work for the web. A key foundation of the course is Mark Tribe’s definition of new media art as work that uses
-            emerging technologies to explore their cultural, political, and aesthetic possibilities. This portfolio shows
-            my experiments with those ideas throughout the course.
-        </p>
     </div>
+</nav>
 
-    <!-- Toggle Script -->
-    <script>
-        function toggleContrast() {
-            document.body.classList.toggle("high-contrast");
+<!-- Main Content -->
+<div class="main-content">
+    <h1>Intro to Digital Media Art (Art-74)</h1>
 
-            const btn = document.querySelector("button");
-            if (document.body.classList.contains("high-contrast")) {
-                btn.innerText = "Normal Mode";
-            } else {
-                btn.innerText = "High Contrast";
-            }
-        }
-    </script>
+    <p>
+        Hello! My name is Stellen McDonald-Lykins.
+    </p>
+
+    <p>
+        This site is my Art 74 portfolio at San José State University.
+        In this class, we focus on the basics of digital media production, including using visualization software
+        and building work for the web. A key foundation of the course is Mark Tribe’s definition of new media art as work that uses
+        emerging technologies to explore their cultural, political, and aesthetic possibilities. This portfolio shows
+        my experiments with those ideas throughout the course.
+    </p>
+</div>
+
+<script>
+function toggleContrast() {
+    document.body.classList.toggle("high-contrast");
+
+    const btn = document.querySelector(".btn-outline-light");
+    if (document.body.classList.contains("high-contrast")) {
+        btn.innerText = "Normal Mode";
+    } else {
+        btn.innerText = "High Contrast";
+    }
+}
+</script>
 
 </body>
 </html>
