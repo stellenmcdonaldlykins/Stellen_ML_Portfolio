@@ -99,6 +99,18 @@
             border: none;
         }
 
+        .custom-red-btn {
+            color: #ff2a2a;
+            border-color: #ff2a2a;
+            background-color: transparent;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .custom-red-btn:hover {
+            background-color: #ff2a2a;
+            color: #000000;
+        }
+
         .page-bottom-space {
             height: 40px;
         }
@@ -195,7 +207,7 @@
         If I were to revisit this project, I would focus on tightening and simplifying the spore growth system. Currently, too many variables control how the spores spread, making the behavior harder to manage and refine.
     </p>
 
-    <button class="btn btn-outline-danger mt-3" type="button" data-bs-toggle="collapse" data-bs-target="#codeDropdown">
+    <button class="btn custom-red-btn mt-3" type="button" data-bs-toggle="collapse" data-bs-target="#codeDropdown">
         Show Code
     </button>
 
@@ -833,7 +845,7 @@ class Spore {
   }
 }
 
-            </code></pre>
+  </code></pre>
         </div>
     </div>
 

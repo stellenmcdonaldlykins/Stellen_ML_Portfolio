@@ -95,6 +95,18 @@
             border: none;
         }
 
+        .custom-red-btn {
+            color: #ff2a2a;
+            border-color: #ff2a2a;
+            background-color: transparent;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .custom-red-btn:hover {
+            background-color: #ff2a2a;
+            color: #000000;
+        }
+
         .page-bottom-space {
             height: 40px;
         }
@@ -188,7 +200,7 @@
         For this assignment, we were tasked with using p5.js, a programming library for creating visual art through code, to build a DIY Photoshop-style tool. I took a different approach by basing mine on a video game idea I’ve had this semester, which I plan to develop in a future project.
     </p>
 
-    <button class="btn btn-outline-danger mt-3" type="button" data-bs-toggle="collapse" data-bs-target="#codeDropdown">
+    <button class="btn custom-red-btn mt-3" type="button" data-bs-toggle="collapse" data-bs-target="#codeDropdown">
         Show Code
     </button>
 
@@ -459,7 +471,7 @@ function saveme() {
   if (second()!=lastscreenshot) saveCanvas(filename,'jpg');
   lastscreenshot = second();
 }
-            </code></pre>
+  </code></pre>
         </div>
     </div>
 

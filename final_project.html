@@ -89,6 +89,18 @@
             margin: 30px auto;
         }
 
+        .custom-red-btn {
+            color: #ff2a2a;
+            border-color: #ff2a2a;
+            background-color: transparent;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .custom-red-btn:hover {
+            background-color: #ff2a2a;
+            color: #000000;
+        }
+
         .page-bottom-space {
             height: 40px;
         }
@@ -98,8 +110,18 @@
         .high-contrast h1,
         .high-contrast p,
         .high-contrast .date,
-        .high-contrast .dropdown-item {
+        .high-contrast .dropdown-item,
+        .high-contrast .btn {
             color: #ffffff !important;
+        }
+
+        .high-contrast .btn {
+            border-color: #ffffff !important;
+        }
+
+        .high-contrast .btn:hover {
+            background-color: #ffffff !important;
+            color: #000000 !important;
         }
     </style>
 </head>
@@ -156,11 +178,31 @@
 
 <!-- Main Content -->
 <div class="container-fluid mt-3 text-center">
-    <h1>Final Project</h1>
+    <h1>Final Project — “My Daughter”</h1>
     <h5 class="date">05/18/2026</h5>
 
+    <iframe 
+        src="https://stellenmcdonaldlykins.github.io/my_daughter_game/"
+        width="100%"
+        height="650"
+        style="
+            border: none;
+            border-radius: 18px;
+            max-width: 950px;
+            display: block;
+            margin: 40px auto;
+            box-shadow: 0 0 25px rgba(255, 42, 42, 0.15);
+        ">
+    </iframe>
+
+    <button 
+        class="btn custom-red-btn mt-3"
+        onclick="window.open('https://stellenmcdonaldlykins.github.io/my_daughter_game/', '_blank')">
+        Open Game In New Tab
+    </button>
+
     <p>
-        Coming soon!
+      My Daughter is an interactive horror visual novel that uses unsettling imagery and intimate narration to explore identity, transformation, and the violence of imposed control.
     </p>
 
     <div class="page-bottom-space"></div>
