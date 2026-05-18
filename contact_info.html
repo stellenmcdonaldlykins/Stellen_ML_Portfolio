@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/png" href="stellenicon.png">
     <title>SML Portfolio - Contact</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -157,18 +157,38 @@
 <div class="contact-box">
     <h1>Contact Me</h1>
 
-    <p>Email: <a href="mailto:stellenml@gmail.com">stellenml@gmail.com</a></p>
+    <p>Personal Email: <a href="mailto:stellenml@gmail.com">stellenml@gmail.com</a></p>
+    <p>SJSU Email: <a href="mailto:stellen.mcdonaldlykins@sjsu.edu">stellen.mcdonaldlykins@sjsu.edu</a></p>
 </div>
 
 <script>
-function toggleContrast() {
-    document.body.classList.toggle("high-contrast");
-
+function applyContrastSetting() {
+    const savedContrast = localStorage.getItem("highContrast");
     const btn = document.querySelector(".btn-outline-light");
-    btn.innerText = document.body.classList.contains("high-contrast")
-        ? "Normal Mode"
-        : "High Contrast";
+
+    if (savedContrast === "on") {
+        document.body.classList.add("high-contrast");
+        btn.innerText = "Normal Mode";
+    } else {
+        document.body.classList.remove("high-contrast");
+        btn.innerText = "High Contrast";
+    }
 }
+
+function toggleContrast() {
+    const isHighContrast = document.body.classList.toggle("high-contrast");
+    const btn = document.querySelector(".btn-outline-light");
+
+    if (isHighContrast) {
+        localStorage.setItem("highContrast", "on");
+        btn.innerText = "Normal Mode";
+    } else {
+        localStorage.setItem("highContrast", "off");
+        btn.innerText = "High Contrast";
+    }
+}
+
+applyContrastSetting();
 </script>
 
 </body>

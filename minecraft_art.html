@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/png" href="stellenicon.png">
     <title>SML Portfolio - Minecraft Art</title>
 
     <!-- Bootstrap CSS -->
@@ -170,7 +170,7 @@
 <!-- Main Content -->
 <div class="container-fluid mt-3 text-center">
     <h1>Minecraft Art</h1>
-    <h5 class="date">02/28/2026</h5>
+    <h5 class="date">02/28/2026 - 03/25/2026</h5>
 
     <div class="art-images">
         <img src="Xeno side.png" alt="Xeno side" width="38%">
@@ -185,18 +185,46 @@
         When building my design in Minecraft, I chose to make the Xenomorph a bit cuter by exaggerating its proportions and giving it an almost dog-like appearance. This was inspired by a Xenomorph plush I own. I’m interested in the contrast between something that represents fear and something that feels soft and approachable, and I wanted to explore that tension through this piece.
     </p>
 
+ <div class="art-images">
+        <img src="Alien3DFinal.png" alt="Xeno print final" width="38%">
+    </div>
+
+  <p>
+        The assignment also involved creating a physical version of the sculpture, so I 3D printed my sculpture using a program called Mineways, which exports the build and converts it into an .STL file for 3D printing.
+    </p>
+
+
     <div class="page-bottom-space"></div>
 </div>
 
 <script>
-function toggleContrast() {
-    document.body.classList.toggle("high-contrast");
-
+function applyContrastSetting() {
+    const savedContrast = localStorage.getItem("highContrast");
     const btn = document.querySelector(".btn-outline-light");
-    btn.innerText = document.body.classList.contains("high-contrast")
-        ? "Normal Mode"
-        : "High Contrast";
+
+    if (savedContrast === "on") {
+        document.body.classList.add("high-contrast");
+        btn.innerText = "Normal Mode";
+    } else {
+        document.body.classList.remove("high-contrast");
+        btn.innerText = "High Contrast";
+    }
 }
+
+function toggleContrast() {
+    const isHighContrast = document.body.classList.toggle("high-contrast");
+    const btn = document.querySelector(".btn-outline-light");
+
+    if (isHighContrast) {
+        localStorage.setItem("highContrast", "on");
+        btn.innerText = "Normal Mode";
+    } else {
+        localStorage.setItem("highContrast", "off");
+        btn.innerText = "High Contrast";
+    }
+}
+
+applyContrastSetting();
 </script>
 
 </body>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/png" href="stellenicon.png">
     <title>SML Portfolio - Glitch Art</title>
 
     <!-- Bootstrap CSS -->
@@ -195,14 +195,33 @@
 </div>
 
 <script>
-function toggleContrast() {
-    document.body.classList.toggle("high-contrast");
-
+function applyContrastSetting() {
+    const savedContrast = localStorage.getItem("highContrast");
     const btn = document.querySelector(".btn-outline-light");
-    btn.innerText = document.body.classList.contains("high-contrast")
-        ? "Normal Mode"
-        : "High Contrast";
+
+    if (savedContrast === "on") {
+        document.body.classList.add("high-contrast");
+        btn.innerText = "Normal Mode";
+    } else {
+        document.body.classList.remove("high-contrast");
+        btn.innerText = "High Contrast";
+    }
 }
+
+function toggleContrast() {
+    const isHighContrast = document.body.classList.toggle("high-contrast");
+    const btn = document.querySelector(".btn-outline-light");
+
+    if (isHighContrast) {
+        localStorage.setItem("highContrast", "on");
+        btn.innerText = "Normal Mode";
+    } else {
+        localStorage.setItem("highContrast", "off");
+        btn.innerText = "High Contrast";
+    }
+}
+
+applyContrastSetting();
 </script>
 
 </body>
